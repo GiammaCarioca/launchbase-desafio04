@@ -23,9 +23,12 @@
         <p>{{teacher.educational_level}}</p>
         <p>Aula {{teacher.modality}}</p>
 
-        {% for field_of_study in teacher.fields_of_study %}
-        <p>{{field_of_study}}</p>
-        {% endfor %}
+        <p>
+        {% set comma = joiner() %}
+        {% for field_of_study in teacher.fields_of_study -%}
+        {{ comma() }} {{field_of_study}}
+        {%- endfor %}
+        </p>
 
         <p>Desde: {{teacher.created_at}}</p>
       </div>

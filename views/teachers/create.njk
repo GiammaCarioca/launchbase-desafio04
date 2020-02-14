@@ -1,0 +1,117 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<form class="card" method="POST" action="/teachers">
+
+  <section class="form-avatar" style="background: url(https://source.unsplash.com/collection/3407717/500x500) no-repeat center center / cover"></section>
+
+  <section class="form-details">
+    <h2>Novo Professor</h2>
+
+    <div class="item">
+      <label for="avatar_url">Avatar URL</label>
+      <div>
+        <input
+          type="url"
+          name="avatar_url"
+          placeholder="http://"
+          id="avatar_url"
+        >
+      </div>
+    </div>
+
+    <div class="item">
+      <label for="full_name">Nome Completo</label>
+      <div>
+        <input
+          type="text"
+          name="full_name"
+          id="full_name"
+        >
+      </div>
+    </div>
+
+    <div class="item">
+      <label for="age">Idade</label>
+      <div>
+        <input
+          type="number"
+          name="age"
+          id="age"
+        >
+      </div>
+    </div>
+
+    <div class="item">
+      <label for="birthday">Data de Nascimento</label>
+      <div>
+        <input
+          type="date"
+          name="birth"
+          id="birthday">
+      </div>
+    </div>
+
+    <div class="item">
+      <label for="modality">Tipo de aula</label>
+      <div>
+        <span>
+          <input
+            type="radio"
+            name="modality"
+            value="presencial"
+            checked>
+          presencial
+        </span>
+        <span>
+          <input
+            type="radio"
+            name="modality"
+            value="à distância">
+          à distância
+        </span>
+      </div>
+    </div>
+
+    <div class="item">
+      <label for="educational_level">Grau de Escolaridade</label>
+      <div>
+        <select name="educational_level">
+          <option value="Ensino Médio Completo"
+          {% if member.educational_level == "Ensino Médio Completo" %}selected{% endif %}>
+            Ensino Médio Completo
+          </option>
+          <option value="Ensino Superior Completo"
+          {% if member.educational_level == "Ensino Superior Completo" %}selected{% endif %}>
+            Ensino Superior Completo
+          </option>
+          <option value="Mestrado"
+          {% if member.educational_level == "Mestrado" %}selected{% endif %}>
+            Mestrado
+          </option>
+          <option value="Doutorado"
+          {% if member.educational_level == "Doutorado" %}selected{% endif %}>
+            Doutorado
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div class="item">
+      <label for="fields_of_study">Área de atuação</label>
+      <div>
+        <input
+          type="text"
+          name="fields_of_study"
+          placeholder="Separe os campos de atuação por vírgula"
+          id="fields_of_study"
+        >
+      </div>
+    </div>
+
+    <button type="submit">Salvar</button>
+    
+  </section>
+</form>
+{% endblock content %}
