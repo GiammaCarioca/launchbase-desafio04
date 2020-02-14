@@ -17,6 +17,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	background: var(--blue-color);
+	min-height: 100vh;
 	overflow-y: scroll;
 }
 
@@ -52,7 +53,7 @@ header a:hover {
 
 .wrapper {
 	max-width: 940px;
-	margin: auto;
+	margin: 0 auto;
 }
 
 h1 {
