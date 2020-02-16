@@ -1,7 +1,7 @@
 const fs = require('fs')
 const Intl = require('intl')
-const data = require('../data.json')
-const { age, date } = require('../lib/utils')
+const data = require('../../../data.json')
+const { age, date } = require('../../lib/utils')
 
 exports.index = function(req, res) {
 	return res.render('teachers/index', { teachers: data.teachers })
@@ -22,6 +22,10 @@ exports.show = function(req, res) {
 	}
 
 	return res.render('teachers/show', { teacher })
+}
+
+exports.create = function(req, res) {
+	return res.render('teachers/create')
 }
 
 exports.post = function(req, res) {
