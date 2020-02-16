@@ -1,94 +1,25 @@
 {
-  "teachers": [
-    {
-      "id": 0,
-      "avatar_url": "https://source.unsplash.com/collection/3407717/500x500",
-      "full_name": "Ana Furtado",
-      "birthday": "20/02/1988",
-      "educational_level": "Mestrado",
-      "modality": "à distância",
-      "fields_of_study": [
-        "Matemática",
-        "Física"
-      ],
-      "created_at": "14/02/2020"
-    },
-    {
-      "id": 1,
-      "avatar_url": "https://source.unsplash.com/collection/3407717/250x170",
-      "full_name": "Ana Furtado",
-      "birthday": "20/02/1988",
-      "educational_level": "Mestrado",
-      "modality": "à distância",
-      "fields_of_study": [
-        "Matemática",
-        "Física"
-      ],
-      "created_at": "14/02/2020"
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://source.unsplash.com/collection/3407717/500x500",
-      "full_name": "Ana Furtado",
-      "birthday": "20/02/1988",
-      "educational_level": "Mestrado",
-      "modality": "à distância",
-      "fields_of_study": [
-        "Matemática",
-        "Física"
-      ],
-      "created_at": "14/02/2020"
-    },
-    {
-      "id": 3,
-      "avatar_url": "https://source.unsplash.com/collection/3407717/500x500",
-      "full_name": "Ana Furtado",
-      "birthday": "20/02/1988",
-      "educational_level": "Mestrado",
-      "modality": "à distância",
-      "fields_of_study": [
-        "Matemática",
-        "Física"
-      ],
-      "created_at": "14/02/2020"
-    },
-    {
-      "id": 4,
-      "avatar_url": "https://source.unsplash.com/collection/3407717/250x170",
-      "full_name": "Ana Furtado",
-      "birthday": "20/02/1988",
-      "educational_level": "Mestrado",
-      "modality": "à distância",
-      "fields_of_study": [
-        "Matemática",
-        "Física"
-      ],
-      "created_at": "14/02/2020"
-    },
-    {
-      "id": 5,
-      "avatar_url": "https://source.unsplash.com/collection/3407717/500x500",
-      "full_name": "Ana Furtado",
-      "birthday": "20/02/1988",
-      "educational_level": "Mestrado",
-      "modality": "à distância",
-      "fields_of_study": [
-        "Matemática",
-        "Física"
-      ],
-      "created_at": "14/02/2020"
-    },
-    {
-      "id": 7,
-      "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-      "full_name": "Mariah Carey",
-      "birthday": 382320000000,
-      "educational_level": "Doutorado",
-      "modality": "à distância",
-      "fields_of_study": [
-        "Songwriting, Singing"
-      ],
-      "created_at": 1581732543888
-    }
-  ]
+	"teachers": [
+		{
+			"id": 1,
+			"avatar_url": "https://source.unsplash.com/collection/3407717/500x500",
+			"full_name": "Mariah Carey",
+			"birthday": 408067200000,
+			"educational_level": "Doutorado",
+			"modality": "à distância",
+			"fields_of_study": ["Songwriting, Singing"],
+			"created_at": "1581857323446",
+			"age": 37
+		},
+		{
+			"id": 2,
+			"avatar_url": "https://source.unsplash.com/collection/3407717/500x500",
+			"full_name": "Victoria Beckham",
+			"birthday": 572313600000,
+			"educational_level": "Mestrado",
+			"modality": "presencial",
+			"fields_of_study": ["Fashion, Moda, Style"],
+			"created_at": 1581857323446
+		}
+	]
 }

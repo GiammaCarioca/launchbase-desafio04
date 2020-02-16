@@ -1,0 +1,96 @@
+<div class="item">
+  <label for="avatar_url">Avatar URL</label>
+  <div>
+    <input
+      type="url"
+      name="avatar_url"
+      placeholder="http://"
+      value="{{teacher.avatar_url}}"
+      id="avatar_url"
+    >
+  </div>
+</div>
+
+<div class="item">
+  <label for="full_name">Nome Completo</label>
+  <div>
+    <input
+      type="text"
+      name="full_name"
+      value="{{teacher.full_name}}"
+      id="full_name"
+    >
+  </div>
+</div>
+
+<div class="item">
+  <label for="birthday">Data de Nascimento</label>
+  <div>
+    <input
+      type="date"
+      name="birthday"
+      value="{{teacher.birthday}}"
+      id="birthday">
+  </div>
+</div>
+
+<div class="item">
+  <label for="educational_level">Grau de Escolaridade</label>
+  <div>
+    <select name="educational_level">
+      <option value="Ensino Médio Completo"
+      {% if member.educational_level == "Ensino Médio Completo" %}selected{% endif %}>
+        Ensino Médio Completo
+      </option>
+      <option value="Ensino Superior Completo"
+      {% if member.educational_level == "Ensino Superior Completo" %}selected{% endif %}>
+        Ensino Superior Completo
+      </option>
+      <option value="Mestrado"
+      {% if member.educational_level == "Mestrado" %}selected{% endif %}>
+        Mestrado
+      </option>
+      <option value="Doutorado"
+      {% if member.educational_level == "Doutorado" %}selected{% endif %}>
+        Doutorado
+      </option>
+    </select>
+  </div>
+</div>
+
+<div class="item">
+  <label for="modality">Tipo de aula</label>
+  <div>
+    <span>
+      <input
+        type="radio"
+        name="modality"
+        value="presencial"
+        {% if teacher.modality == 'presencial' %}checked{% endif %}
+      > presencial
+    </span>
+    <span>
+      <input
+        type="radio"
+        name="modality"
+        value="à distância"
+        {% if teacher.modality == 'à distância' %}checked{% endif %}
+      > à distância
+    </span>
+  </div>
+</div>
+
+<div class="item">
+  <label for="fields_of_study">Área de atuação</label>
+  <div>
+    <input
+      type="text"
+      name="fields_of_study[]"
+      placeholder="Separe os campos de atuação por vírgula"
+      value="{{teacher.fields_of_study}}"
+      id="fields_of_study"
+    >
+  </div>
+</div>
+
+<button type="submit">Salvar</button>
