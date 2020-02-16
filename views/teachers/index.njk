@@ -2,41 +2,30 @@
 
 {% block content %}
 
-<div class="wrapper">
-	<h1>Teachers</h1>
-
-  <section class="cards-grid">
-
-    {% for teacher in teachers %}
-    <div class="card" id="{{teacher.id}}">
-
-      <div class="card-avatar">
-        <img
-          src="{{teacher.avatar_url}}"
-          alt="Imagem de {{teacher.full_name}}"
-        />
-      </div>
-
-      <div class="card-details">
-        <p>{{teacher.full_name}}</p>
-        <p>{{teacher.age}} anos</p>
-        <p>{{teacher.educational_level}}</p>
-        <p>Aula {{teacher.modality}}</p>
-
-        <p>
-        {% set comma = joiner() %}
-        {% for field_of_study in teacher.fields_of_study -%}
-        {{ comma() }} {{field_of_study}}
-        {%- endfor %}
-        </p>
-
-        <p>Desde: {{teacher.created_at}}</p>
-      </div>
-
-    </div>
-    {% endfor %}
-  </section>
-
+<div class="card table-container">
+	<table width="100%">
+    <thead>
+      <tr>
+        <th>Nome Completo</th>
+        <th>Acompanhamento</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for teacher in teachers %}
+      <tr>
+        <td>
+          <span style="background-image: url({{teacher.avatar_url}})">
+        </span>
+          {{ teacher.full_name }}</td>
+        <td>{{ teacher.fields_of_study }}</td>
+        <td>
+          <a href="/teachers/{{teacher.id}}">ver</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </div>
 
 <script src="/scripts.js"></script>

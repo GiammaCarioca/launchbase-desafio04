@@ -17,8 +17,8 @@ exports.show = function(req, res) {
 	const teacher = {
 		...foundTeacher,
 		fields_of_study: String(foundTeacher.fields_of_study).split(','),
-		age: age(foundTeacher.birthday)
-		// created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at)
+		age: age(foundTeacher.birthday),
+		created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at)
 	}
 
 	return res.render('teachers/show', { teacher })

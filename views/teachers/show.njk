@@ -31,7 +31,11 @@
       {% endfor %}
     </div>
 
-    <p>Desde: {{teacher.created_at}}</p>
+    <div class="item">
+      <p>Desde: {{teacher.created_at}}<p>
+    </div>
+
+    <a href="/teachers/{{ teacher.id }}/edit" class="button">Editar</a>
     
   </section>
 {% endblock content %}

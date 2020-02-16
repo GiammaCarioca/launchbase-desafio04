@@ -177,7 +177,8 @@ form .item input:not([type='radio']) {
 	line-height: 27px;
 }
 
-form button[type='submit'] {
+form button[type='submit'],
+a.button {
 	background: var(--green-color);
 	color: var(--dark-color);
 	width: 100%;
@@ -185,11 +186,22 @@ form button[type='submit'] {
 	font-weight: 700;
 	line-height: 41px;
 	cursor: pointer;
+	border-radius: 4px;
+	margin-top: 24px;
 }
 
-form button[type='submit']:hover {
+form button[type='submit']:hover,
+a.button:hover {
 	background: var(--blue-color);
 	color: var(--green-color);
+}
+
+a.button {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 4px;
+	margin-top: 24px;
 }
 
 #form-delete button[type='submit'] {
@@ -200,6 +212,74 @@ form button[type='submit']:hover {
 #form-delete button[type='submit']:hover {
 	margin-top: 8px;
 	background-color: tomato;
+}
+
+/* === INDEX TEACHERS === */
+.table-container {
+	display: block;
+	padding: 40px;
+}
+
+.table-container table {
+	border-spacing: 0;
+}
+
+.table-container thead tr th {
+	text-align: left;
+}
+
+td,
+th {
+	font-size: 21px;
+	padding: 16px;
+	border-bottom: 1px solid var(--blue-color);
+}
+
+th {
+	text-transform: uppercase;
+	color: var(--blue-color);
+	font-size: 21px;
+}
+
+tbody tr:last-child td {
+	border-bottom: none;
+}
+
+tbody tr td:first-child {
+	display: grid;
+	grid-template-columns: 64px 1fr;
+	align-items: center;
+}
+
+tbody tr td:first-child span {
+	width: 48px;
+	height: 48px;
+	background-position: center;
+	background-size: cover;
+	border-radius: 50%;
+	box-shadow: 3px 1px 6px -4px #000;
+	border: 2px solid var(--green-color);
+}
+
+tbody tr td:last-child a {
+	background-color: var(--green-color);
+	padding: 8px 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--blue-color);
+	font-size: 21px;
+	font-weight: 700;
+	border-radius: 4px;
+}
+
+tbody tr td:last-child a:hover {
+	background-color: var(--blue-color);
+	color: var(--green-color);
+}
+
+.table-container thead tr th:last-child,
+td:last-child {
+	text-align: center;
 }
 
 @media (max-width: 607px) {
