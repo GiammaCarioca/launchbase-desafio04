@@ -67,7 +67,8 @@ h1 {
 }
 
 .card,
-.show-card {
+.show-card,
+.form-avatar {
 	background: var(--white-color);
 	height: 70vh;
 	border-radius: 4px;
@@ -107,7 +108,7 @@ h1 {
 	display: flex;
 	flex-grow: 1;
 	justify-content: center;
-	text-align: center;
+	align-items: center;
 }
 
 .show-details p {
@@ -124,6 +125,11 @@ h1 {
 }
 
 /* FORM */
+.forms-wrapper {
+	background: var(--white-color);
+	border-radius: 4px;
+}
+
 form.card,
 div.show-card {
 	display: grid;
@@ -184,6 +190,16 @@ form button[type='submit'] {
 form button[type='submit']:hover {
 	background: var(--blue-color);
 	color: var(--green-color);
+}
+
+#form-delete button[type='submit'] {
+	margin-top: 8px;
+	background-color: gray;
+}
+
+#form-delete button[type='submit']:hover {
+	margin-top: 8px;
+	background-color: tomato;
 }
 
 @media (max-width: 607px) {
