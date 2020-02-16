@@ -23,35 +23,52 @@ header {
 	background: var(--green-color);
 	padding: 12px;
 	margin-bottom: 20px;
+	height: 15vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-header a {
-	color: var(--dark-color);
+.nav-links a {
+	color: var(--blue-color);
 	font-weight: 700;
 	text-transform: lowercase;
 	text-decoration: none;
-	font-size: 24px;
+	font-size: 36px;
 	line-height: 41px;
 	border-bottom: solid 4px transparent;
+	position: relative;
 }
 
-nav {
-	display: flex;
-	justify-content: center;
-}
-
-header a + a {
+.nav-links a + a {
 	margin-left: 20px;
 }
 
-header a:hover {
-	border-bottom: solid 4px var(--blue-color);
-	transition: border 200ms;
+.nav-links a.active {
+	color: var(--blue-color);
+}
+
+.nav-links a::after {
+	content: '';
+	width: 0;
+	height: 4px;
+	background-color: var(--blue-color);
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+}
+
+.nav-links a.active::after,
+.nav-links a:hover::after {
+	width: 100%;
+	transition: width 200ms ease-in-out;
 }
 
 .wrapper {
 	max-width: 80vw;
-	margin: 0 auto;
+	margin: 20px auto;
+	display: flex;
+	flex-direction: column;
 }
 
 h1 {
@@ -218,6 +235,7 @@ a.button {
 .table-container {
 	display: block;
 	padding: 40px;
+	height: min-content;
 }
 
 .table-container table {
