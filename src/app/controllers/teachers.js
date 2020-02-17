@@ -14,8 +14,6 @@ exports.show = function(req, res) {
 
 	if (!foundTeacher) return res.send('Teacher not found!')
 
-	console.log(foundTeacher)
-
 	const teacher = {
 		...foundTeacher,
 		fields_of_study: String(foundTeacher.fields_of_study).split(','),
@@ -74,6 +72,7 @@ exports.edit = function(req, res) {
 
 exports.update = function(req, res) {
 	const { id } = req.body
+
 	let index = 0
 
 	const foundTeacher = data.teachers.find(function(teacher, foundIndex) {

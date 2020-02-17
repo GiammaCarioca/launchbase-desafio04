@@ -20,7 +20,7 @@ exports.show = function(req, res) {
 		grade: grade(foundStudent.grade)
 	}
 
-	return res.render('students/show', { student })
+	return res.render('students/show', { student, date })
 }
 
 exports.create = function(req, res) {
