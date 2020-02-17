@@ -1,60 +1,54 @@
 {
-  "students": [
-    {
-      "id": "1",
-      "avatar_url": "https://i.dailymail.co.uk/1s/2019/07/26/06/16522616-7288445-image-a-3_1564120606038.jpg",
-      "full_name": "Cruz Beckham",
-      "email": "cruz@beckham.com",
-      "birthday": "2005-03-17",
-      "weekly_hours": "5",
-      "grade": "seventh-grade"
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://www.hellomagazine.com/imagenes/fashion/hfm/2019012266913/victoria-beckham-reebok-collection-instagram-photos/0-315-9/victoria-beckham-reebok-z.jpg",
-      "full_name": "Angélica Huck",
-      "email": "angelica@globo.com",
-      "birthday": 218160000000,
-      "weekly_hours": "2",
-      "grade": "eighth-grade"
-    }
-  ],
-  "teachers": [
-    {
-      "id": "1",
-      "avatar_url": "https://images.unsplash.com/photo-1574895581441-7cf6cf7b3c36?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      "full_name": "Robyn Rihanna Fenty",
-      "birthday": 572313600000,
-      "educational_level": "Doutorado",
-      "modality": "à distância",
-      "fields_of_study": [
-        "Fashion, Music, Design, Beauty"
-      ],
-      "created_at": 1581879365230
-    },
-    {
-      "id": "2",
-      "avatar_url": "https://images.unsplash.com/photo-1551693886-e05efa0d1216?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80",
-      "full_name": "Victoria Beckham",
-      "birthday": 196732800000,
-      "educational_level": "Mestrado",
-      "modality": "presencial",
-      "fields_of_study": [
-        "Fashion, Design, Beauty"
-      ],
-      "created_at": 1581879437535
-    },
-    {
-      "id": "3",
-      "avatar_url": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      "full_name": "Mariah Carey",
-      "birthday": -24192000000,
-      "educational_level": "Ensino Médio Completo",
-      "modality": "à distância",
-      "fields_of_study": [
-        "Music"
-      ],
-      "created_at": 1581880207918
-    }
-  ]
+	"students": [
+		{
+			"id": "1",
+			"avatar_url": "https://i.dailymail.co.uk/1s/2019/07/26/06/16522616-7288445-image-a-3_1564120606038.jpg",
+			"full_name": "Cruz Beckham",
+			"email": "cruz@beckham.com",
+			"birthday": "2005-03-17",
+			"weekly_hours": "5",
+			"grade": "seventh"
+		},
+		{
+			"id": 2,
+			"avatar_url": "https://www.hellomagazine.com/imagenes/fashion/hfm/2019012266913/victoria-beckham-reebok-collection-instagram-photos/0-315-9/victoria-beckham-reebok-z.jpg",
+			"full_name": "Angélica Huck",
+			"email": "angelica@globo.com",
+			"birthday": 218160000000,
+			"weekly_hours": "2",
+			"grade": "eighth"
+		}
+	],
+	"teachers": [
+		{
+			"id": "1",
+			"avatar_url": "https://images.unsplash.com/photo-1574895581441-7cf6cf7b3c36?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+			"full_name": "Robyn Rihanna Fenty",
+			"birthday": 572313600000,
+			"education": "doctors",
+			"modality": "à distância",
+			"fields_of_study": ["Fashion, Music, Design, Beauty"],
+			"created_at": 1581879365230
+		},
+		{
+			"id": "2",
+			"avatar_url": "https://images.unsplash.com/photo-1551693886-e05efa0d1216?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80",
+			"full_name": "Victoria Beckham",
+			"birthday": 196732800000,
+			"education": "masters",
+			"modality": "presencial",
+			"fields_of_study": ["Fashion, Design, Beauty"],
+			"created_at": 1581879437535
+		},
+		{
+			"id": "3",
+			"avatar_url": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+			"full_name": "Mariah Carey",
+			"birthday": -24192000000,
+			"education": "highschool",
+			"modality": "à distância",
+			"fields_of_study": ["Music"],
+			"created_at": 1581880207918
+		}
+	]
 }

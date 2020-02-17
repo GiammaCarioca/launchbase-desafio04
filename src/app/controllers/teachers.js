@@ -1,7 +1,7 @@
 const fs = require('fs')
 const Intl = require('intl')
 const data = require('../../../data.json')
-const { age, date } = require('../../lib/utils')
+const { age, date, graduation } = require('../../lib/utils')
 
 exports.index = function(req, res) {
 	return res.render('teachers/index', { teachers: data.teachers })
@@ -14,10 +14,13 @@ exports.show = function(req, res) {
 
 	if (!foundTeacher) return res.send('Teacher not found!')
 
+	console.log(foundTeacher)
+
 	const teacher = {
 		...foundTeacher,
 		fields_of_study: String(foundTeacher.fields_of_study).split(','),
 		age: age(foundTeacher.birthday),
+		education: graduation(foundTeacher.education),
 		created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at)
 	}
 
@@ -69,7 +72,7 @@ exports.edit = function(req, res) {
 	return res.render('teachers/edit', { teacher })
 }
 
-exports.put = function(req, res) {
+exports.update = function(req, res) {
 	const { id } = req.body
 	let index = 0
 
