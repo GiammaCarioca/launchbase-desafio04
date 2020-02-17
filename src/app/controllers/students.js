@@ -1,6 +1,7 @@
 const fs = require('fs')
 const Intl = require('intl')
 const data = require('../../../data.json')
+const { age, date } = require('../../lib/utils')
 
 exports.index = function(req, res) {
 	return res.render('students/index', { students: data.students })
@@ -13,7 +14,12 @@ exports.show = function(req, res) {
 
 	if (!foundStudent) return res.send('Student not found!')
 
-	return res.render('students/show', { foundStudent })
+	const student = {
+		...foundStudent,
+		age: age(foundStudent.birthday)
+	}
+
+	return res.render('students/show', { student })
 }
 
 exports.create = function(req, res) {
@@ -29,9 +35,25 @@ exports.post = function(req, res) {
 		}
 	}
 
+	let { avatar_url, full_name, email, birthday, weekly_hours, grade } = req.body
+
+	birthday = Date.parse(birthday)
+
+	let id = 1
+	const lastStudent = data.students[data.students.length - 1]
+
+	if (lastStudent) {
+		id = Number(lastStudent.id) + 1
+	}
+
 	const student = {
-		id: Number(data.students.length + 1),
-		...req.body
+		id,
+		avatar_url,
+		full_name,
+		email,
+		birthday,
+		weekly_hours,
+		grade
 	}
 
 	data.students.push(student)
@@ -39,7 +61,7 @@ exports.post = function(req, res) {
 	fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
 		if (err) return res.send('Write file error!')
 
-		return res.redirect('/students')
+		return res.redirect(`/students/${id}`)
 	})
 }
 
@@ -50,7 +72,12 @@ exports.edit = function(req, res) {
 
 	if (!foundStudent) return res.send('Student not found!')
 
-	return res.render('students/edit', { foundStudent })
+	const student = {
+		...foundStudent,
+		birthday: date(foundStudent.birthday).iso
+	}
+
+	return res.render('students/edit', { student })
 }
 
 exports.put = function(req, res) {

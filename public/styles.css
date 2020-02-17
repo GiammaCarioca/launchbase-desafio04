@@ -148,7 +148,8 @@ h1 {
 }
 
 form.card,
-div.show-card {
+div.show-card,
+.forms-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	height: max-content;

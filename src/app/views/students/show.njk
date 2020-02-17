@@ -4,38 +4,32 @@
 
 <div class="show-card">
 
-  <section class="show-avatar" style="background: url({{teacher.avatar_url}}) no-repeat center center / cover"></section>
+  <section class="show-avatar" style="background: url({{student.avatar_url}}) no-repeat center center / cover"></section>
 
   <section class="show-details">
-    <h2>{{teacher.full_name}}</h2>
+    <h2>{{student.full_name}}</h2>
+
+    <div class="item">
+      <p>Email</p>
+      <span>{{student.email}}</span>
+    </div>
 
     <div class="item">
       <p>Idade</p>
-      <span>{{teacher.age}} anos</span>
+      <span>{{student.age}} anos</span>
     </div>
 
     <div class="item">
-      <p>Grau de Escolaridade</p>
-      <span>{{teacher.educational_level}}</span>
+      <p>Ano escolar</p>
+      <span>{{student.grade}}</span>
     </div>
 
     <div class="item">
-      <p>Tipo de aula</p>
-      <span>{{teacher.modality}}</span>
+      <p>Carga horária semanal</p>
+      <span>{{student.weekly_hours}} horas</span>
     </div>
 
-    <div class="item">
-      <p>Área de atuação</p>
-      {% for field_of_study in teacher.fields_of_study %}
-      <span>{{field_of_study}}</span>
-      {% endfor %}
-    </div>
-
-    <div class="item">
-      <p>Desde: {{teacher.created_at}}<p>
-    </div>
-
-    <a href="/teachers/{{ teacher.id }}/edit" class="button">Editar</a>
+    <a href="/students/{{ student.id }}/edit" class="button">Editar</a>
     
   </section>
 {% endblock content %}
